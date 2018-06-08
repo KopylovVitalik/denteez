@@ -10,24 +10,30 @@
 </head>
 
 <body>
-	<button id="fetchData">Render by fetch</button>
+	<div class="buttons">
+		<button id="fetchData" class="fetch-btn">Render by fetch</button>
+		<button id="brokenData" class="fetch-btn">Broken fetch</button>
+	</div>
 	<div id="wrapper"></div>
 	<header class="main-header">
 		<div class="container">
 			<div class="top">
 				<div class="logo">
-					<img src="images/Logo.png" alt="Denteez">
+					<a href="index.html">
+						<img src="images/Logo.png" alt="Denteez">
+					</a>
 				</div>
 				<form action="#" class="search-form">
 					<input type="text" class="search-form__input" placeholder="Company name">
 				</form>
-
-				<a href="#" class="user__notifications">
-					<img src="images/icons/header/chat.png" alt="Chat">
-				</a>
-				<a href="#" class="user__notifications">
-					<img src="images/icons/header/notification.png" alt="">
-				</a>
+				<div class="user__notifications">
+					<a href="#" class="user__notification" data-info="chat">
+						<img src="images/icons/header/chat.png" alt="Chat">
+					</a>
+					<a href="#" class="user__notification" data-info="notifications">
+						<img src="images/icons/header/notification.png" alt="">
+					</a>
+				</div>
 				<a href="#" class="user__info">
 					<img src="../src/images/people/1.jpg" alt="user image" class="user__img">
 					<span class="user__name">Maximillian Beekeeper</span>
@@ -304,12 +310,11 @@
 		</div>
 	</div>
 
-	<div id="modal-404" class="modal">
+	<div class="modal">
 		<h2>Something bad happend</h2>
+		<button class="js-go-back"></button>
 	</div>
-	<div id="modal-500" class="modal">
-		<h2>Something bad happend</h2>
-	</div>
+
 	<script src="js/main.js"></script>
 </body>
 

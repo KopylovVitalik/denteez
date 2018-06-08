@@ -61,6 +61,9 @@ p {
   background-color: rgba($color: #fff, $alpha: 0.2);
   z-index: 100;
   display: none;
+  &.active {
+    display: block;
+  }
 }
 
 .modal {
@@ -69,18 +72,26 @@ p {
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 10px;
-  border: 3px solid blue;
+  border-radius: 5px;
+  border: solid 1px $light-grey;
   z-index: 101;
-  padding: 100px;
+  padding: 100px 200px;
   background-color: #fff;
   box-shadow: 0 0 20px rgba($color: #999, $alpha: 1);
-}
-.modal:hover {
-  box-shadow: 0 15px 5px -5px rgba($color: #000, $alpha: 0.9);
+  &.active {
+    display: block;
+  }
 }
 
-.container {
+.main-container {
+  position: relative;
+  display: flex;
+  @include tablet {
+    flex-flow: column;
+  }
+}
+.container,
+.main-container {
   margin: 0 auto;
   width: 1200px;
   @include mobile {
@@ -179,15 +190,6 @@ p {
 //   }
 // }
 
-.main-container {
-  position: relative;
-  display: flex;
-  margin: 0 150px;
-  @include tablet {
-    flex-flow: column;
-    margin: 0 50px;
-  }
-}
 .sidebar-left,
 .sidebar-right {
   flex-basis: 212px;
@@ -257,15 +259,30 @@ p {
   }
 }
 
-#fetchData {
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px auto;
+}
+
+.fetch-btn {
   @extend .btn;
-  position: fixed;
-  top: 100px;
-  left: 10px;
+  display: block;
+  margin: 0 12px;
+  min-width: 130px;
   background-color: transparent;
-  color: red;
-  border: 1px solid red;
   &:active {
     box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.9);
   }
+}
+
+#fetchData {
+  color: $green;
+  border: 1px solid $green;
+}
+
+#brokenData {
+  color: red;
+  border: 1px solid red;
 }

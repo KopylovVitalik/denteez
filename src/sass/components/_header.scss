@@ -1,5 +1,13 @@
 .main-header {
+  margin-bottom: 15px;
+  border-bottom: 2px solid $dark-green;
   background-color: $green;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  color: #fff;
 }
 
 .logo {
@@ -11,24 +19,59 @@
   margin: 0 30px;
   input {
     width: 100%;
-    background-color: darken($green, 10%);
-    padding: 10px;
-    border-radius: 12px;
-
+    padding: 10px 10px 10px 38px;
+    border-radius: 3px;
     outline: none;
     border: none;
+    color: #fff;
+    background-color: $dark-green;
+    background-image: url(../images/icons/header/search.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    transition: box-shadow 0.3s;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 15px #fff;
+      transition: box-shadow 0.3s;
+    }
+    &::placeholder {
+      color: #fff;
+    }
   }
-}
-
-.top {
-  display: flex;
-  align-items: center;
 }
 
 .user {
   &__notifications {
-    display: block;
-    margin: 0 20px;
+    margin-right: 30px;
+    :first-child {
+      margin-right: 18px;
+    }
+  }
+  &__notification {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: attr(data-info);
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      height: 20px;
+      padding: 3px;
+      color: $text-black;
+      background-color: #fff;
+      border-radius: 3px;
+      border: 1px solid $dark-green;
+      display: none;
+    }
+    &:hover:after {
+      display: block;
+    }
+    img {
+      margin: 0 !important;
+    }
   }
   &__info {
     display: flex;
@@ -36,6 +79,9 @@
     width: 212px;
     padding: 10px 0;
     margin-left: auto;
+    img {
+      border-radius: 3px;
+    }
   }
   &__name {
     line-height: 40px;

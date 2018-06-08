@@ -1,54 +1,173 @@
-function getData() {
-  fetch('http://504080.com/api/v1/services/categories', {
-    method: 'GET',
-    headers: {
-      Authorization: '3e7e9ca21feb811ba93547b12296631b624acc3a'
-    }
-  })
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        return Promise.reject({
-          status: response.status,
-          statusText: response.statusText
-        });
+function get(url) {
+  return new Promise((resolve, reject) => {
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        Authorization: '3e7e9ca21feb811ba93547b12296631b624acc3a'
       }
     })
+      .then(res => res.json())
+      .then(data => resolve(data))
+      .catch(err => reject(err));
+  });
+}
+
+// function getData() {
+//   fetch('http://504080.com/api/v1/services/categories', {
+//     method: 'GET',
+//     headers: {
+//       Authorization: '3e7e9ca21feb811ba93547b12296631b624acc3a'
+//     }
+//   })
+//     .then(response => {
+//       if (response.ok) {
+//         return response.json();
+//       } else {
+//         return Promise.reject('something went wrong!');
+//       }
+//     })
+//     .then(data => {
+//       const info = data.data;
+//       let content = '';
+//       info.forEach(el => {
+//         content += `
+// 				<div class="service__item">
+// 				<div style="background-image: url(${
+//           el.icon
+//         })" class="service__image--fetched"></div>
+// 				<p class="service__title">${el.title}</p>
+// 			</div>
+// 				`;
+//       });
+//       document.querySelector('.service__container').innerHTML = content;
+//     })
+//     .catch(error => {
+//       document.querySelector('#wrapper').classList.add('active');
+//       document.querySelector('.modal').classList.add('active');
+//       document.querySelector('.modal').innerHTML = error;
+//       setTimeout(() => {
+//         document.querySelector('#wrapper').classList.remove('active');
+//         document.querySelector('.modal').classList.remove('active');
+//       }, 3500);
+//     });
+// }
+
+// function handleResponse(response) {
+//   return response.json().then(json => {
+//     if (response.ok) {
+//       return json;
+//     } else {
+//       return Promise.reject(json);
+//     }
+//   });
+// }
+
+// function getData() {
+//   fetch('http://504080.com/api/v1/services/categories', {
+//     method: 'GET',
+//     headers: {
+//       Authorization: '3e7e9ca21feb811ba93547b12296631b624acc3a'
+//     }
+//   })
+//     .then(response => {
+//       if (response.ok) {
+//         return response.json();
+//       } else {
+//         return Promise.reject('something went wrong!');
+//       }
+//     })
+//     .then(data => {
+//       const info = data.data;
+//       let content = '';
+//       info.forEach(el => {
+//         content += `
+// 				<div class="service__item">
+// 				<div style="background-image: url(${
+//           el.icon
+//         })" class="service__image--fetched"></div>
+// 				<p class="service__title">${el.title}</p>
+// 			</div>
+// 				`;
+//       });
+//       document.querySelector('.service__container').innerHTML = content;
+//     })
+//     .catch(error => {
+//       document.querySelector('#wrapper').classList.add('active');
+//       document.querySelector('.modal').classList.add('active');
+//       document.querySelector('.modal').innerHTML = error;
+//       setTimeout(() => {
+//         document.querySelector('#wrapper').classList.remove('active');
+//         document.querySelector('.modal').classList.remove('active');
+//       }, 3500);
+//     });
+// }
+
+function handleResponse(response) {
+  return response.json().then(json => {
+    if (response.ok) {
+      return json;
+    } else {
+      return Promise.reject(json);
+    }
+  });
+}
+
+function loadFetchedData() {
+  const container = document.querySelector('.service__container');
+
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
+  get('http://504080.com/api/v1/services/categories')
     .then(data => {
       const info = data.data;
       let content = '';
       info.forEach(el => {
         content += `
-				<div class="service__item">
-				<div style="background-image: url(${
-          el.icon
-        })" class="service__image--fetched"></div>
-				<p class="service__title">${el.title}</p>
-			</div>
-				`;
+    				<div class="service__item">
+    				<div style="background-image: url(${
+              el.icon
+            })" class="service__image--fetched"></div>
+    				<p class="service__title">${el.title}</p>
+    			</div>
+    				`;
       });
       document.querySelector('.service__container').innerHTML = content;
     })
-    .catch(error => {
-      // if (error.status.indexOf('4') === 0) {
-      console.log(error.status);
-      // }
-    });
+    .catch(err => console.log(err));
 }
 
-function loadFetchedData() {
+function loadBrokenData() {
   const container = document.querySelector('.service__container');
+
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
-  getData();
+
+  get('http://504080.com/api/v1/services/categoriessdsd')
+    .then(data => console.log(data))
+    .catch(error => {
+      document.querySelector('#wrapper').classList.add('active');
+      document.querySelector('.modal').classList.add('active');
+      document.querySelector('.modal').innerHTML = error;
+      setTimeout(() => {
+        document.querySelector('#wrapper').classList.remove('active');
+        document.querySelector('.modal').classList.remove('active');
+      }, 3500);
+    });
 }
 
 if (document.querySelector('#fetchData')) {
   document
     .querySelector('#fetchData')
     .addEventListener('click', loadFetchedData);
+}
+
+if (document.querySelector('#brokenData')) {
+  document
+    .querySelector('#brokenData')
+    .addEventListener('click', loadBrokenData);
 }
 
 // ===== UPLOADER =====
