@@ -1,0 +1,30 @@
+$green: #87b448;
+$light-grey: #e0e2e6;
+
+$dark-text: #59606b;
+$light-text: #7c8695;
+$text-black: #1c2534;
+
+$bb-grey: 1px solid $light-grey;
+
+$tablet-width: 576px;
+$desktop-width: 992px;
+$mobile-width: 576px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}

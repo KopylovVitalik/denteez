@@ -1,0 +1,310 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$accountacy-name: 'accountacy';
+$accountacy-x: 176px;
+$accountacy-y: 335px;
+$accountacy-offset-x: -176px;
+$accountacy-offset-y: -335px;
+$accountacy-width: 69px;
+$accountacy-height: 69px;
+$accountacy-total-width: 491px;
+$accountacy-total-height: 488px;
+$accountacy-image: '../img/sprite.png';
+$accountacy: (176px, 335px, -176px, -335px, 69px, 69px, 491px, 488px, '../img/sprite.png', 'accountacy', );
+$assotiations-name: 'assotiations';
+$assotiations-x: 156px;
+$assotiations-y: 0px;
+$assotiations-offset-x: -156px;
+$assotiations-offset-y: 0px;
+$assotiations-width: 75px;
+$assotiations-height: 75px;
+$assotiations-total-width: 491px;
+$assotiations-total-height: 488px;
+$assotiations-image: '../img/sprite.png';
+$assotiations: (156px, 0px, -156px, 0px, 75px, 75px, 491px, 488px, '../img/sprite.png', 'assotiations', );
+$basic-support-name: 'basic-support';
+$basic-support-x: 0px;
+$basic-support-y: 247px;
+$basic-support-offset-x: 0px;
+$basic-support-offset-y: -247px;
+$basic-support-width: 73px;
+$basic-support-height: 72px;
+$basic-support-total-width: 491px;
+$basic-support-total-height: 488px;
+$basic-support-image: '../img/sprite.png';
+$basic-support: (0px, 247px, 0px, -247px, 73px, 72px, 491px, 488px, '../img/sprite.png', 'basic-support', );
+$buy-sell-name: 'buy-sell';
+$buy-sell-x: 90px;
+$buy-sell-y: 156px;
+$buy-sell-offset-x: -90px;
+$buy-sell-offset-y: -156px;
+$buy-sell-width: 73px;
+$buy-sell-height: 73px;
+$buy-sell-total-width: 491px;
+$buy-sell-total-height: 488px;
+$buy-sell-image: '../img/sprite.png';
+$buy-sell: (90px, 156px, -90px, -156px, 73px, 73px, 491px, 488px, '../img/sprite.png', 'buy-sell', );
+$cleaning-agencies-name: 'cleaning-agencies';
+$cleaning-agencies-x: 0px;
+$cleaning-agencies-y: 156px;
+$cleaning-agencies-offset-x: 0px;
+$cleaning-agencies-offset-y: -156px;
+$cleaning-agencies-width: 74px;
+$cleaning-agencies-height: 75px;
+$cleaning-agencies-total-width: 491px;
+$cleaning-agencies-total-height: 488px;
+$cleaning-agencies-image: '../img/sprite.png';
+$cleaning-agencies: (0px, 156px, 0px, -156px, 74px, 75px, 491px, 488px, '../img/sprite.png', 'cleaning-agencies', );
+$computer-service-name: 'computer-service';
+$computer-service-x: 335px;
+$computer-service-y: 177px;
+$computer-service-offset-x: -335px;
+$computer-service-offset-y: -177px;
+$computer-service-width: 72px;
+$computer-service-height: 72px;
+$computer-service-total-width: 491px;
+$computer-service-total-height: 488px;
+$computer-service-image: '../img/sprite.png';
+$computer-service: (335px, 177px, -335px, -177px, 72px, 72px, 491px, 488px, '../img/sprite.png', 'computer-service', );
+$dental-chair-recovery-name: 'dental-chair-recovery';
+$dental-chair-recovery-x: 247px;
+$dental-chair-recovery-y: 90px;
+$dental-chair-recovery-offset-x: -247px;
+$dental-chair-recovery-offset-y: -90px;
+$dental-chair-recovery-width: 72px;
+$dental-chair-recovery-height: 73px;
+$dental-chair-recovery-total-width: 491px;
+$dental-chair-recovery-total-height: 488px;
+$dental-chair-recovery-image: '../img/sprite.png';
+$dental-chair-recovery: (247px, 90px, -247px, -90px, 72px, 73px, 491px, 488px, '../img/sprite.png', 'dental-chair-recovery', );
+$dental-recruitment-name: 'dental-recruitment';
+$dental-recruitment-x: 247px;
+$dental-recruitment-y: 0px;
+$dental-recruitment-offset-x: -247px;
+$dental-recruitment-offset-y: 0px;
+$dental-recruitment-width: 72px;
+$dental-recruitment-height: 74px;
+$dental-recruitment-total-width: 491px;
+$dental-recruitment-total-height: 488px;
+$dental-recruitment-image: '../img/sprite.png';
+$dental-recruitment: (247px, 0px, -247px, 0px, 72px, 74px, 491px, 488px, '../img/sprite.png', 'dental-recruitment', );
+$dental-software-name: 'dental-software';
+$dental-software-x: 335px;
+$dental-software-y: 89px;
+$dental-software-offset-x: -335px;
+$dental-software-offset-y: -89px;
+$dental-software-width: 72px;
+$dental-software-height: 72px;
+$dental-software-total-width: 491px;
+$dental-software-total-height: 488px;
+$dental-software-image: '../img/sprite.png';
+$dental-software: (335px, 89px, -335px, -89px, 72px, 72px, 491px, 488px, '../img/sprite.png', 'dental-software', );
+$elctrical-safety-name: 'elctrical-safety';
+$elctrical-safety-x: 89px;
+$elctrical-safety-y: 247px;
+$elctrical-safety-offset-x: -89px;
+$elctrical-safety-offset-y: -247px;
+$elctrical-safety-width: 73px;
+$elctrical-safety-height: 72px;
+$elctrical-safety-total-width: 491px;
+$elctrical-safety-total-height: 488px;
+$elctrical-safety-image: '../img/sprite.png';
+$elctrical-safety: (89px, 247px, -89px, -247px, 73px, 72px, 491px, 488px, '../img/sprite.png', 'elctrical-safety', );
+$equipment-engeneering-name: 'equipment-engeneering';
+$equipment-engeneering-x: 178px;
+$equipment-engeneering-y: 247px;
+$equipment-engeneering-offset-x: -178px;
+$equipment-engeneering-offset-y: -247px;
+$equipment-engeneering-width: 72px;
+$equipment-engeneering-height: 72px;
+$equipment-engeneering-total-width: 491px;
+$equipment-engeneering-total-height: 488px;
+$equipment-engeneering-image: '../img/sprite.png';
+$equipment-engeneering: (178px, 247px, -178px, -247px, 72px, 72px, 491px, 488px, '../img/sprite.png', 'equipment-engeneering', );
+$marketing-name: 'marketing';
+$marketing-x: 423px;
+$marketing-y: 0px;
+$marketing-offset-x: -423px;
+$marketing-offset-y: 0px;
+$marketing-width: 68px;
+$marketing-height: 71px;
+$marketing-total-width: 491px;
+$marketing-total-height: 488px;
+$marketing-image: '../img/sprite.png';
+$marketing: (423px, 0px, -423px, 0px, 68px, 71px, 491px, 488px, '../img/sprite.png', 'marketing', );
+$others-name: 'others';
+$others-x: 89px;
+$others-y: 335px;
+$others-offset-x: -89px;
+$others-offset-y: -335px;
+$others-width: 71px;
+$others-height: 69px;
+$others-total-width: 491px;
+$others-total-height: 488px;
+$others-image: '../img/sprite.png';
+$others: (89px, 335px, -89px, -335px, 71px, 69px, 491px, 488px, '../img/sprite.png', 'others', );
+$repairs-name: 'repairs';
+$repairs-x: 423px;
+$repairs-y: 87px;
+$repairs-offset-x: -423px;
+$repairs-offset-y: -87px;
+$repairs-width: 68px;
+$repairs-height: 69px;
+$repairs-total-width: 491px;
+$repairs-total-height: 488px;
+$repairs-image: '../img/sprite.png';
+$repairs: (423px, 87px, -423px, -87px, 68px, 69px, 491px, 488px, '../img/sprite.png', 'repairs', );
+$selling-gold-name: 'selling-gold';
+$selling-gold-x: 0px;
+$selling-gold-y: 422px;
+$selling-gold-offset-x: 0px;
+$selling-gold-offset-y: -422px;
+$selling-gold-width: 69px;
+$selling-gold-height: 66px;
+$selling-gold-total-width: 491px;
+$selling-gold-total-height: 488px;
+$selling-gold-image: '../img/sprite.png';
+$selling-gold: (0px, 422px, 0px, -422px, 69px, 66px, 491px, 488px, '../img/sprite.png', 'selling-gold', );
+$solicitors-name: 'solicitors';
+$solicitors-x: 423px;
+$solicitors-y: 256px;
+$solicitors-offset-x: -423px;
+$solicitors-offset-y: -256px;
+$solicitors-width: 65px;
+$solicitors-height: 70px;
+$solicitors-total-width: 491px;
+$solicitors-total-height: 488px;
+$solicitors-image: '../img/sprite.png';
+$solicitors: (423px, 256px, -423px, -256px, 65px, 70px, 491px, 488px, '../img/sprite.png', 'solicitors', );
+$surgery-design-name: 'surgery-design';
+$surgery-design-x: 0px;
+$surgery-design-y: 335px;
+$surgery-design-offset-x: 0px;
+$surgery-design-offset-y: -335px;
+$surgery-design-width: 73px;
+$surgery-design-height: 71px;
+$surgery-design-total-width: 491px;
+$surgery-design-total-height: 488px;
+$surgery-design-image: '../img/sprite.png';
+$surgery-design: (0px, 335px, 0px, -335px, 73px, 71px, 491px, 488px, '../img/sprite.png', 'surgery-design', );
+$training-name: 'training';
+$training-x: 423px;
+$training-y: 172px;
+$training-offset-x: -423px;
+$training-offset-y: -172px;
+$training-width: 67px;
+$training-height: 68px;
+$training-total-width: 491px;
+$training-total-height: 488px;
+$training-image: '../img/sprite.png';
+$training: (423px, 172px, -423px, -172px, 67px, 68px, 491px, 488px, '../img/sprite.png', 'training', );
+$uniform-name: 'uniform';
+$uniform-x: 0px;
+$uniform-y: 0px;
+$uniform-offset-x: 0px;
+$uniform-offset-y: 0px;
+$uniform-width: 140px;
+$uniform-height: 140px;
+$uniform-total-width: 491px;
+$uniform-total-height: 488px;
+$uniform-image: '../img/sprite.png';
+$uniform: (0px, 0px, 0px, 0px, 140px, 140px, 491px, 488px, '../img/sprite.png', 'uniform', );
+$waste-collection-name: 'waste-collection';
+$waste-collection-x: 335px;
+$waste-collection-y: 0px;
+$waste-collection-offset-x: -335px;
+$waste-collection-offset-y: 0px;
+$waste-collection-width: 72px;
+$waste-collection-height: 73px;
+$waste-collection-total-width: 491px;
+$waste-collection-total-height: 488px;
+$waste-collection-image: '../img/sprite.png';
+$waste-collection: (335px, 0px, -335px, 0px, 72px, 73px, 491px, 488px, '../img/sprite.png', 'waste-collection', );
+$web-designers-name: 'web-designers';
+$web-designers-x: 261px;
+$web-designers-y: 335px;
+$web-designers-offset-x: -261px;
+$web-designers-offset-y: -335px;
+$web-designers-width: 69px;
+$web-designers-height: 69px;
+$web-designers-total-width: 491px;
+$web-designers-total-height: 488px;
+$web-designers-image: '../img/sprite.png';
+$web-designers: (261px, 335px, -261px, -335px, 69px, 69px, 491px, 488px, '../img/sprite.png', 'web-designers', );
+$spritesheet-width: 491px;
+$spritesheet-height: 488px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($accountacy, $assotiations, $basic-support, $buy-sell, $cleaning-agencies, $computer-service, $dental-chair-recovery, $dental-recruitment, $dental-software, $elctrical-safety, $equipment-engeneering, $marketing, $others, $repairs, $selling-gold, $solicitors, $surgery-design, $training, $uniform, $waste-collection, $web-designers, );
+$spritesheet: (491px, 488px, '../img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

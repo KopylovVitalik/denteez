@@ -1,0 +1,45 @@
+.main-header {
+  background-color: $green;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.search-form {
+  flex-grow: 1;
+  margin: 0 30px;
+  input {
+    width: 100%;
+    background-color: darken($green, 10%);
+    padding: 10px;
+    border-radius: 12px;
+
+    outline: none;
+    border: none;
+  }
+}
+
+.top {
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  &__notifications {
+    display: block;
+    margin: 0 20px;
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    width: 212px;
+    padding: 10px 0;
+    margin-left: auto;
+  }
+  &__name {
+    line-height: 40px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+}

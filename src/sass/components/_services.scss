@@ -1,0 +1,55 @@
+.service {
+  margin: 0 16px;
+  // flex-basis: calc(100% - 424px);
+  flex: 1;
+  @include tablet {
+    flex-basis: 100%;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 5px;
+    border: solid 1px $light-grey;
+  }
+  &__item {
+    margin: 16px 10px;
+    width: 140px;
+    text-align: center;
+  }
+  &__image {
+    box-shadow: 0 0 20px rgba($color: #999, $alpha: 1);
+    // position: relative;
+    height: 140px;
+    width: 140px;
+    border: solid 1px $light-grey;
+    padding: 20px;
+    background: center no-repeat;
+    background-size: 100px 100px;
+    background-clip: content-box;
+  }
+  &__image--fetched {
+    // position: relative;
+    height: 140px;
+    width: 140px;
+    border: solid 1px $light-grey;
+    padding: 0;
+    background: center no-repeat;
+    background-size: 140px 140px;
+    background-clip: content-box;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+  &__header-title {
+    display: inline-block;
+    margin-right: auto;
+    // max-width: 140px;
+    font-size: 30px;
+    line-height: 1.25;
+    text-align: center;
+    color: $text-black;
+  }
+}
