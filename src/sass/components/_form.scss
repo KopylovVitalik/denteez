@@ -66,7 +66,7 @@
 
 .contact-form {
   position: relative;
-  z-index: 100; //&&&&&&&&&&&&&&&&&&&&&&&&
+  z-index: 100;
   margin: -100px auto 0;
   padding: 20px;
   border: solid 1px #e0e2e6;
@@ -111,8 +111,6 @@
   font-size: 16px;
   color: #1c2534;
   border: solid 1px #c8cdd5;
-  // line-height: 52px;
-  // height: 52px;
   &::placeholder {
     color: #7c8695;
   }
@@ -134,7 +132,6 @@ select {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
     right: 28px;
     pointer-events: none;
     z-index: 1;

@@ -1,4 +1,13 @@
-// ===== NAVIGATION =====
+.sidebar-left,
+.sidebar-right {
+  flex-basis: 212px;
+  @include desktop {
+    flex-basis: 150px;
+  }
+  @include tablet {
+    flex-basis: 100%;
+  }
+}
 
 .main-nav {
   li {
@@ -19,5 +28,124 @@
     font-size: 16px;
     vertical-align: middle;
     line-height: 50px;
+  }
+}
+
+.featured-companies,
+.peoples,
+.products {
+  border-bottom: $bb-grey;
+  &__title {
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 10px;
+    &--grey {
+      color: $light-text;
+    }
+    &--black {
+      display: inline-block;
+      margin-left: 24px;
+      color: $text-black;
+      cursor: pointer;
+    }
+  }
+  @include tablet {
+    padding-bottom: 10px;
+  }
+}
+
+.company {
+  margin-bottom: 20px;
+  &__image {
+    float: left;
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 5px;
+    img {
+      transform: scale(1.25);
+    }
+  }
+  &__title {
+    font-size: 16px;
+    color: $text-black;
+  }
+  &__area {
+    font-size: 14px;
+    color: $light-text;
+  }
+  &__adress {
+    font-size: 14px;
+    color: $light-text;
+  }
+  &__href {
+    font-size: 12px;
+    color: $text-black;
+  }
+}
+
+.copyright {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #b7bfcd;
+  span:last-child {
+    margin-left: 20px;
+  }
+}
+
+.advertisement {
+  border-bottom: $bb-grey;
+  &__title {
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 10px;
+    color: $light-text;
+  }
+  &__author {
+    margin: 8px 0 18px;
+    font-size: 11px;
+    color: #d3d3d3;
+    line-height: 10px;
+  }
+}
+
+@include tablet {
+  .sidebar-left {
+    order: 1;
+  }
+  .company {
+    display: inline-block;
+    width: 45%;
+  }
+  .advertisement {
+    float: right;
+  }
+  .copyright {
+    display: none;
+  }
+}
+
+@include mobile {
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 114px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #fff;
+    &.active {
+      display: block;
+    }
+  }
+  .sidebar-left {
+    order: 3;
+  }
+  .copyright {
+    display: block;
+  }
+  .advertisement {
+    display: none;
   }
 }

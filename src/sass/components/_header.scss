@@ -7,6 +7,7 @@
 .top {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   color: #fff;
 }
 
@@ -87,5 +88,64 @@
     line-height: 40px;
     display: inline-block;
     margin-left: 10px;
+  }
+}
+
+.main-nav-toggler {
+  display: none;
+}
+
+@include desktop {
+  .user {
+    &__name {
+      // display: none;
+    }
+  }
+}
+
+@include tablet {
+  .user {
+    &__info {
+      margin: 0;
+      width: 32px;
+      img {
+        height: 32px;
+        width: 32px;
+      }
+    }
+    &__notifications,
+    &__name {
+      display: none;
+    }
+  }
+}
+
+@include mobile {
+  .logo {
+    width: 100%;
+    padding: 10px 0;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .main-nav-toggler {
+    display: block;
+    height: 37px;
+    width: 32px;
+  }
+  .search-form {
+    margin: 0 16px;
+    flex-grow: 1;
+  }
+  .user {
+    &__info {
+      margin: 0;
+      width: 32px;
+      img {
+        height: 32px;
+        width: 32px;
+      }
+    }
   }
 }

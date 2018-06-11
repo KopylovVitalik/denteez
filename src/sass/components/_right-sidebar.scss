@@ -1,0 +1,54 @@
+.people {
+  clear: both;
+  &__title {
+    @extend .company__title;
+  }
+  &__image {
+    @extend .company__image;
+  }
+  &__profession {
+    @extend .company__area;
+  }
+  &__adress {
+    @extend .company__adress;
+  }
+  &__add {
+    @extend .company__href;
+  }
+}
+
+.product {
+  clear: both;
+  &__title {
+    @extend .company__title;
+  }
+  &__image {
+    @extend .company__image;
+  }
+  &__lead {
+    @extend .company__area;
+  }
+  &__short-descr {
+    @extend .company__area;
+  }
+}
+
+@include tablet {
+  .sidebar-right {
+    order: 3;
+    .advertisement {
+      display: none;
+    }
+  }
+  .people,
+  .company {
+    display: inline-block;
+    width: 45%;
+    margin-right: 10px;
+  }
+}
+@include mobile {
+  .sidebar-right {
+    order: 2;
+  }
+}

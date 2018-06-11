@@ -52,6 +52,15 @@ p {
   margin: 0;
 }
 
+.clearfix {
+  &:after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+// ===== MODAL WINDOW =====
 #wrapper {
   position: fixed;
   top: 0;
@@ -83,6 +92,24 @@ p {
   }
 }
 
+// ===== MAIN CONTAINERS =====
+.container,
+.main-container {
+  width: 960px;
+  margin: 0 auto;
+  @include desktop {
+    width: 100%;
+    padding: 0 20px;
+  }
+  @include tablet {
+    width: 100%;
+    padding: 0 20px;
+  }
+  @include mobile {
+    padding: 0 20px;
+  }
+}
+
 .main-container {
   position: relative;
   display: flex;
@@ -90,151 +117,8 @@ p {
     flex-flow: column;
   }
 }
-.container,
-.main-container {
-  margin: 0 auto;
-  width: 1200px;
-  @include mobile {
-    width: 100%;
-    padding: 0 20px;
-  }
-}
 
-// ===== ADVERTIZEMENT =====
-
-.advertisement {
-  border-bottom: $bb-grey;
-  &__title {
-    margin: 20px 0;
-    font-size: 14px;
-    line-height: 10px;
-    color: $light-text;
-  }
-  &__author {
-    margin: 8px 0 18px;
-    font-size: 11px;
-    color: #d3d3d3;
-    line-height: 10px;
-  }
-}
-
-// ===== FEATURED COMPANIEZ =====
-
-.featured-companies,
-.peoples,
-.products {
-  border-bottom: $bb-grey;
-  &__title {
-    margin: 20px 0;
-    font-size: 14px;
-    line-height: 10px;
-    &--grey {
-      color: $light-text;
-    }
-    &--black {
-      display: inline-block;
-      margin-left: 24px;
-      color: $text-black;
-      cursor: pointer;
-    }
-  }
-}
-
-.company {
-  margin-bottom: 20px;
-  &__image {
-    float: left;
-    margin-right: 10px;
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-    border-radius: 5px;
-    img {
-      transform: scale(1.25);
-      // margin-left: calc( -1 * ( 100% - 80px / 2) );
-    }
-  }
-  &__title {
-    font-size: 16px;
-    color: $text-black;
-  }
-  &__area {
-    font-size: 14px;
-    color: $light-text;
-  }
-  &__adress {
-    font-size: 14px;
-    color: $light-text;
-  }
-  &__href {
-    font-size: 12px;
-    color: $text-black;
-  }
-}
-
-.copyright {
-  margin-top: 18px;
-  font-size: 12px;
-  color: #b7bfcd;
-  span:last-child {
-    margin-left: 20px;
-  }
-}
-
-// ===== LAYOUT =====
-
-// .container {
-//   margin: 0 150px;
-//   @include tablet {
-//     margin: 0 50px;
-//   }
-// }
-
-.sidebar-left,
-.sidebar-right {
-  flex-basis: 212px;
-  // min-width: 212px;
-  // flex-basis: max-content;
-  @include tablet {
-    flex-basis: 100%;
-  }
-}
-
-.people {
-  clear: both;
-  &__title {
-    @extend .company__title;
-  }
-  &__image {
-    @extend .company__image;
-  }
-  &__profession {
-    @extend .company__area;
-  }
-  &__adress {
-    @extend .company__adress;
-  }
-  &__add {
-    @extend .company__href;
-  }
-}
-
-.product {
-  clear: both;
-  &__title {
-    @extend .company__title;
-  }
-  &__image {
-    @extend .company__image;
-  }
-  &__lead {
-    @extend .company__area;
-  }
-  &__short-descr {
-    @extend .company__area;
-  }
-}
-
+// ===== Button =====
 .btn {
   height: 30px;
   font-family: ProximaNova;
@@ -259,6 +143,7 @@ p {
   }
 }
 
+// ===== FETCH BUTTONS =====
 .buttons {
   display: flex;
   align-items: center;
@@ -285,4 +170,10 @@ p {
 #brokenData {
   color: red;
   border: 1px solid red;
+}
+
+@include tablet {
+  .buttons {
+    display: none;
+  }
 }

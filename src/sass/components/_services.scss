@@ -1,9 +1,9 @@
 .service {
   margin: 0 16px;
-  // flex-basis: calc(100% - 424px);
   flex: 1;
   @include tablet {
     flex-basis: 100%;
+    order: 2;
   }
   &__container {
     display: flex;
@@ -11,9 +11,10 @@
     justify-content: space-around;
     border-radius: 5px;
     border: solid 1px $light-grey;
+    padding: 0 4px;
   }
   &__item {
-    margin: 16px 10px;
+    margin: 16px 8px;
     width: 140px;
     text-align: center;
     cursor: pointer;
@@ -22,7 +23,6 @@
     }
   }
   &__image {
-    // position: relative;
     height: 140px;
     width: 140px;
     border: solid 1px $light-grey;
@@ -40,7 +40,6 @@
     transition: 1s;
   }
   &__image--fetched {
-    // position: relative;
     height: 140px;
     width: 140px;
     border: solid 1px $light-grey;
@@ -58,10 +57,13 @@
   &__header-title {
     display: inline-block;
     margin-right: auto;
-    // max-width: 140px;
     font-size: 30px;
     line-height: 1.25;
     text-align: center;
     color: $text-black;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 400px;
   }
 }

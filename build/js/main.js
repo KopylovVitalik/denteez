@@ -12,96 +12,6 @@ function get(url) {
   });
 }
 
-// function getData() {
-//   fetch('http://504080.com/api/v1/services/categories', {
-//     method: 'GET',
-//     headers: {
-//       Authorization: '3e7e9ca21feb811ba93547b12296631b624acc3a'
-//     }
-//   })
-//     .then(response => {
-//       if (response.ok) {
-//         return response.json();
-//       } else {
-//         return Promise.reject('something went wrong!');
-//       }
-//     })
-//     .then(data => {
-//       const info = data.data;
-//       let content = '';
-//       info.forEach(el => {
-//         content += `
-// 				<div class="service__item">
-// 				<div style="background-image: url(${
-//           el.icon
-//         })" class="service__image--fetched"></div>
-// 				<p class="service__title">${el.title}</p>
-// 			</div>
-// 				`;
-//       });
-//       document.querySelector('.service__container').innerHTML = content;
-//     })
-//     .catch(error => {
-//       document.querySelector('#wrapper').classList.add('active');
-//       document.querySelector('.modal').classList.add('active');
-//       document.querySelector('.modal').innerHTML = error;
-//       setTimeout(() => {
-//         document.querySelector('#wrapper').classList.remove('active');
-//         document.querySelector('.modal').classList.remove('active');
-//       }, 3500);
-//     });
-// }
-
-// function handleResponse(response) {
-//   return response.json().then(json => {
-//     if (response.ok) {
-//       return json;
-//     } else {
-//       return Promise.reject(json);
-//     }
-//   });
-// }
-
-// function getData() {
-//   fetch('http://504080.com/api/v1/services/categories', {
-//     method: 'GET',
-//     headers: {
-//       Authorization: '3e7e9ca21feb811ba93547b12296631b624acc3a'
-//     }
-//   })
-//     .then(response => {
-//       if (response.ok) {
-//         return response.json();
-//       } else {
-//         return Promise.reject('something went wrong!');
-//       }
-//     })
-//     .then(data => {
-//       const info = data.data;
-//       let content = '';
-//       info.forEach(el => {
-//         content += `
-// 				<div class="service__item">
-// 				<div style="background-image: url(${
-//           el.icon
-//         })" class="service__image--fetched"></div>
-// 				<p class="service__title">${el.title}</p>
-// 			</div>
-// 				`;
-//       });
-//       document.querySelector('.service__container').innerHTML = content;
-//     })
-//     .catch(error => {
-//       document.querySelector('#wrapper').classList.add('active');
-//       document.querySelector('.modal').classList.add('active');
-//       document.querySelector('.modal').innerHTML = error;
-//       setTimeout(() => {
-//         document.querySelector('#wrapper').classList.remove('active');
-//         document.querySelector('.modal').classList.remove('active');
-//       }, 3500);
-//     });
-// }
-
 function handleResponse(response) {
   return response.json().then(json => {
     if (response.ok) {
@@ -154,7 +64,7 @@ function loadBrokenData() {
       setTimeout(() => {
         document.querySelector('#wrapper').classList.remove('active');
         document.querySelector('.modal').classList.remove('active');
-      }, 3500);
+      }, 2500);
     });
 }
 
@@ -169,6 +79,11 @@ if (document.querySelector('#brokenData')) {
     .querySelector('#brokenData')
     .addEventListener('click', loadBrokenData);
 }
+
+// ===== MAIN-NAV TOGGLER =====
+document.querySelector('.main-nav-toggler').addEventListener('click', e => {
+  document.querySelector('.main-nav').classList.toggle('active');
+});
 
 // ===== UPLOADER =====
 
