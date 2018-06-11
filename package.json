@@ -1,10 +1,9 @@
 {
-  "name": "creativeeurope",
+  "name": "abz test",
   "version": "1.0.0",
   "description": "working test",
   "main": "gulpfile.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
@@ -27,11 +26,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://edu.bionic-university.com/bitbucket/projects/EUR/repos/europe/"
+    "url": "https://github.com/KopylovVitalik/denteez"
   },
   "keywords": [
     "work",
-    "europe",
+    "denteez",
     "development"
   ],
   "author": "kopylov_vitalii",

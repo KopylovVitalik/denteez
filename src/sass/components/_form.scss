@@ -152,6 +152,10 @@ textarea.input {
   line-height: 1;
 }
 
+.form-section {
+  padding-bottom: 99px;
+}
+
 @include mobile {
   .input-group {
     margin-bottom: 10px;
@@ -165,6 +169,9 @@ textarea.input {
     &:first-child {
       margin-bottom: 10px;
     }
+  }
+  .form-section {
+    padding-bottom: 40px;
   }
 }
 

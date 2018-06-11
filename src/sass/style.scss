@@ -16,6 +16,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Light.eot');
+  src: local('Proxima Nova Light'), local('ProximaNova-Light'),
+    url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova-Light.woff') format('woff'),
+    url('../fonts/ProximaNova-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -137,7 +148,6 @@ p {
     width: 100%;
     height: 52px;
     margin-top: 20px;
-    margin-bottom: 99px;
     font-size: 16px;
     line-height: 52px;
   }
